@@ -99,9 +99,9 @@ ${license}
 ## Questions
 Any questions? Reach out:
 
-    *   GitHub: https://github.com/${response.username}
+*   GitHub: https://github.com/${response.username}
 
-    *   Email: ${response.email}
+*   Email: ${response.email}
 `;
 
 		fs.writeFile('./output/README.md', readme, (err) => {

@@ -1,6 +1,7 @@
-[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
 
-# k
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+# Sample Title
 
 ## Table of Contents
 
@@ -13,28 +14,27 @@
 
 ## Description
 
-- k
+*   Sample description
 
 ## Installation
 
-- k
+*   Sample installation instructions
 
 ## Usage
 
-- k
+*   Sample usage information
 
 ## Contributing
 
-- k
+*   Sample contribution guidelines
 
 ## Tests
 
-- k
+*   Sample test instructions
 
 ## Questions
-
 Any questions? Reach out:
 
-- GitHub: https://github.com/kyleyee522
+*   GitHub: https://github.com/kyleyee522
 
-- Email: kyleyee522@gmail.com
+*   Email: kyleyee522@gmail.com
