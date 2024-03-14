@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 let readme;
+let license;
 
 inquirer
 	.prompt([
@@ -52,4 +53,58 @@ inquirer
 			name: 'email',
 		},
 	])
-	.then((response) => {});
+	.then((response) => {
+		if (response.license === 'IBM') {
+			license = `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`;
+		} else if (response.license === 'ISC') {
+			license = `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`;
+		} else if (response.license === 'MIT') {
+			license = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+		}
+
+		readme = `
+${license}
+
+# ${response.title}
+
+## Table of Contents
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Description
+
+*   ${response.description}
+
+## Installation
+
+*   ${response.installation}
+
+## Usage
+
+*   ${response.usage}
+
+## Contributing
+
+*   ${response.guidelines}
+
+## Tests
+
+*   ${response.test}
+
+## Questions
+Any questions? Reach out:
+
+    *   GitHub: https://github.com/${response.username}
+
+    *   Email: ${response.email}
+`;
+
+		fs.writeFile('./output/README.md', readme, (err) => {
+			err ? console.error(err) : console.log('File Created!');
+		});
+	});
